@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ezgilerdeki Değerler</title>
+  <style>
+    :root{
+      --bg: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --line: rgba(17, 24, 39, .18);
+
+      --btn-primary: #2f5bd4;   /* mavi */
+      --btn-primary-hover: #2447a7;
+
+      --btn-outline: #eef2ff;   /* açık zemin */
+      --btn-outline-border: rgba(47, 91, 212, .25);
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    /* Sayfa alanı */
+    .hero{
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 56px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Görseldeki gibi yumuşak arka plan "blob"ları */
+    .blob{
+      position: absolute;
+      inset: auto;
+      width: 78vmax;
+      height: 40vmax;
+      background: #f2f3f5;
+      border-radius: 999px;
+      filter: blur(0px);
+      opacity: 1;
+      z-index: 0;
+    }
+    .blob.left{
+      left: -35vmax;
+      top: 10vmax;
+      transform: rotate(-6deg);
+    }
+    .blob.right{
+      right: -38vmax;
+      top: 6vmax;
+      transform: rotate(10deg);
+      width: 85vmax;
+      height: 42vmax;
+      background: #f1f1f1;
+    }
+
+    /* İçerik kutusu */
+    .card{
+      z-index: 1;
+      width: min(820px, 100%);
+      text-align: center;
+      padding: 18px 10px;
+    }
+
+    h1{
+      margin: 0;
+      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .divider{
+      width: min(420px, 70%);
+      height: 1px;
+      background: var(--line);
+      margin: 14px auto 16px;
+    }
+
+    p{
+      margin: 0 auto 22px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+      width: min(540px, 92%);
+    }
+
+    /* Butonlar ALT ALTA */
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+   .btn{
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 14px 22px;
+  width: 520px;              /* 👈 SABİT GENİŞLİK */
+  max-width: 100%;           /* mobil uyum */
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+    .btn:active{ transform: translateY(1px); }
+
+    .btn.primary{
+      background: var(--btn-primary);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(47, 91, 212, .25);
+    }
+    .btn.primary:hover{
+      background: var(--btn-primary-hover);
+      box-shadow: 0 14px 30px rgba(47, 91, 212, .32);
+      transform: translateY(-1px);
+    }
+
+    .btn.outline{
+      background: #ffffffcc;
+      color: #1f2a5a;
+      border-color: var(--btn-outline-border);
+      box-shadow: 0 10px 22px rgba(17,24,39,.08);
+      backdrop-filter: blur(6px);
+    }
+    .btn.outline:hover{
+      border-color: rgba(47, 91, 212, .38);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(17,24,39,.10);
+    }
+
+    /* Küçük ekranlarda daha rahat */
+    @media (max-width: 420px){
+      .btn{ min-width: 200px; }
+      p{ font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="blob left" aria-hidden="true"></div>
+    <div class="blob right" aria-hidden="true"></div>
+
+    <div class="card">
+      <h1>EZGİLERDEKİ DEĞERLER</h1>
+      <div class="divider"></div>
+      <p>SİNOP HALK TÜRKÜLERİNİN ANALİZİ VE DİJİTAL MATERYAL TASARIMI</p>
+
+      <!-- Açıklayıcı paragrafı buraya yazabilirsin -->
+      <p>Açıklayıcı bir paragraf ekleyeceğim sonra.</p>
+
+      <div class="buttons">
+
+  <a class="btn outline" href="ikon.html">SİNOP HALK TÜRKÜLERİ DİJİTAL KİTAPÇIĞI İKON SETİ</a>
+
+  <a class="btn primary" href="susuz.html">AK BAKRAÇLAR SUSUZ KALDI</a>
+  <a class="btn primary" href="buk.html">BÜK DİBİNDE YATARIM</a>
+  <a class="btn primary" href="salkim.html">ENTARISI SALKIM SALKIM</a>
+  <a class="btn primary" href="ip.html">İP ATTIM ULAŞ DİYE</a>
+  <a class="btn primary" href="erik.html">KIRDA ERİK AĞACI</a>
+  <a class="btn primary" href="kum.html">KUMKAPININ KİLİDİ</a>
+  <a class="btn primary" href="uc.html">ÜÇ GÜN EVVEL GELDİ GELİN ALICI</a>
+  <a class="btn primary" href="batum.html">BEN GİDERİM BATUMA</a>
+  <a class="btn primary" href="degirmen.html">DEĞİRMEN GAŞOĞUSU</a>
+  <a class="btn primary" href="duman.html">ADANIN BURNUNU DUMAN BÜRÜDÜ</a>
+  <a class="btn primary" href="armut.html">ARMUT DALDAN DÜŞER Mİ</a>
+  <a class="btn primary" href="ayancik.html">AYANCIK EYMELERİ</a>
+  <a class="btn primary" href="kandil.html">BEYLER (DE) BAHÇESİNDE KANDİLLER YANAR</a>
+  <a class="btn primary" href="cimen.html">ÇİMENCİDE AKTAŞLAR</a>
+  <a class="btn primary" href="ezel.html">EZELİDİR DELİ GÖNÜL</a>
+  <a class="btn primary" href="salkim2.html">ENTARISI SALKIM SALKIM</a>
+  <a class="btn primary" href="araba.html">ARABAYI KOŞALIM</a>
+  <a class="btn primary" href="ayancik2.html">AYANCIK TEPELERİ</a>
+  <a class="btn primary" href="koy.html">HEBİR KÖYÜN DÜZÜNDE</a>
+  <a class="btn primary" href="kale.html">KALEDEN İNDİM BUGÜN</a>
+  <a class="btn primary" href="karasu.html">KARASUDA PAZAR VAR</a>
+  <a class="btn primary" href="ay.html">İSTEFANDA AY DOĞDU</a>
+  <a class="btn primary" href="erik2.html">KIRDA ERİK AĞACI</a>
+  <a class="btn primary" href="cam.html">PENCERESİ CAM CAMA (MUALLİM)</a>
+  <a class="btn primary" href="pencere.html">PENCERENİN ALTINDA</a>
+  <a class="btn primary" href="sellim.html">SELLİM SAYMA (HELESA)</a>
+  <a class="btn primary" href="salkim3.html">SÖĞÜTLER SALKIM SAÇAK</a>
+  <a class="btn primary" href="seftali3.html">ŞEFTALİ AĞAÇLARI</a>
+  <a class="btn primary" href="tabak.html">TABAKLININ DERESİ</a>
+  <a class="btn primary" href="tersane.html">TERSANEDEN KALKTI EFE ALAYI</a>
+  <a class="btn primary" href="dolu.html">TÜFEĞİM DOLU SAÇMA</a>
+  <a class="btn primary" href="uc2.html">ÜÇ GÜN EVVEL GELDİ GELİN ALICI</a>
+
+  <a class="btn outline" 
+     href="https://drive.google.com/file/d/1RJiCk-vCczAFr-FSkT7AQW9cr4J-cUu1/view?usp=sharing" 
+     target="_blank">
+     KİTAPÇIK PDF'Sİ
+  </a>
+
+</div>
+    </div>
+  </section>
+</body>
+</html>
