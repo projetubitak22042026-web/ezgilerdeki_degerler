@@ -15,13 +15,13 @@
 }
 
 
-    *{ box-sizing: border-box; }
-    body{
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-    }
+  body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden; 
+}
 
     
     .hero{
@@ -104,7 +104,8 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 14px 22px;
   border-radius: 999px;
   text-decoration: none;
@@ -151,15 +152,19 @@
   transform: translateY(-1px);
 }
 
-    /* Küçük ekranlarda daha rahat */
-    @media (max-width: 420px){
-      .btn{ min-width: 200px; }
-      p{ font-size: 14px; }
-    }
+@media (max-width: 480px){
+  .btn{
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+
   </style>
 </head>
 
 <body>
+
+
   <section class="hero">
     <div class="blob left" aria-hidden="true"></div>
     <div class="blob right" aria-hidden="true"></div>
@@ -170,16 +175,7 @@
       <p>SİNOP HALK TÜRKÜLERİNİN ANALİZİ VE DİJİTAL MATERYAL TASARIMI</p>
 
       <!-- Açıklayıcı paragrafı buraya yazabilirsin -->
-      <p>Sinop’un hırçın dalgalarından, yeşil doğasından ve köklü tarihinden süzülüp gelen halk
-türküleri, sadece birer melodi değil; toplumumuzun ahlaki kodlarını ve kadim değerlerini
-taşıyan birer hazinedir.
-Bu platform, “Ezgilerdeki Değerler” projesi kapsamında; Sinop yöresine ait halk
-türkülerinin Türkiye Yüzyılı Maarif Modeli ışığında incelenmesiyle oluşturulmuştur.
-Amacımız, türkülerimizde saklı olan sevgi, saygı, adalet, yardımseverlik ve sabır gibi “kök
-değerleri” gün yüzüne çıkarmak ve bu mirası dijital çağın imkanlarıyla gelecek nesillere
-aktarmaktır.
-Aşağıdaki listede, her bir türkünün satır aralarında gizlenmiş erdemleri keşfedebilir, kare
-kodlar aracılığıyla bu ezgileri dinleyerek Sinop’un kültürel dünyasına tanıklık edebilirsiniz.</p>
+      <p>Açıklayıcı bir paragraf ekleyeceğim sonra.</p>
 
       <div class="buttons">
 
@@ -229,4 +225,3 @@ kodlar aracılığıyla bu ezgileri dinleyerek Sinop’un kültürel dünyasına
   </section>
 </body>
 </html>
-
